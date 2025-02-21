@@ -20,7 +20,10 @@
     "upgrade": "npm update --save-dev && npm update --save",
     "upgrade-latest": "npx npm-check-updates -u && npm install ",
     "test": "jest --forceExit --detectOpenHandles --coverage --verbose",
-    "test:jwt": "ts-node src/tests/test-jwt.ts"
+    "test:jwt": "ts-node src/tests/test-jwt.ts",
+    "prepare": "husky",
+    "lint": "eslint . --config .eslintrc",
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
@@ -28,6 +31,7 @@
     "@types/jsonwebtoken": "^9.0.8",
     "dotenv": "^16.4.7",
     "eslint": "^9.20.1",
+    "husky": "^9.1.7",
     "jest": "^29.7.0",
     "nodemon": "^3.1.9",
     "prettier": "^3.5.1",

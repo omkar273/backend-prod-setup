@@ -22,7 +22,7 @@ abstract class ApiResponse {
     protected statusCode: StatusCode,
     protected status: ResponseStatus,
     protected message: string,
-  ) { }
+  ) {}
 
   protected prepare<T extends ApiResponse>(
     res: Response,
@@ -97,7 +97,10 @@ export class FailureMsgResponse extends ApiResponse {
 }
 
 export class SuccessResponse<T> extends ApiResponse {
-  constructor(message: string, private data: T) {
+  constructor(
+    message: string,
+    private data: T,
+  ) {
     super(StatusCode.SUCCESS, ResponseStatus.SUCCESS, message);
   }
 

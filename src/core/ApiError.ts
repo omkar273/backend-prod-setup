@@ -23,7 +23,10 @@ export enum ErrorType {
 }
 
 export class ApiError extends Error {
-  constructor(public type: string, public message: string = 'error') {
+  constructor(
+    public type: string,
+    public message: string = 'error',
+  ) {
     super(type);
   }
 
