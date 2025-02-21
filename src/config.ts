@@ -22,7 +22,7 @@ export const tokenInfo = {
     // audience: process.env.TOKEN_AUDIENCE || '',
 };
 
-// export const logDirectory = process.env.LOG_DIR;
+export const logDirectory = process.env.LOG_DIR;
 
 // export const redis = {
 //     host: process.env.REDIS_HOST || '',
